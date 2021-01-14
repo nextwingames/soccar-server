@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Net;
+using System.Net.Sockets;
+using Nextwin.Util;
 
 namespace SoccarServer
 {
@@ -6,7 +9,14 @@ namespace SoccarServer
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ListenServer listenServer = new ListenServer(9999);
+            listenServer.Listen();
+            Console.WriteLine("Start Listen");
+            while(true)
+            {
+                string input = Console.ReadLine();
+                Console.WriteLine("You Typed : " + input);
+            }
         }
     }
 }
