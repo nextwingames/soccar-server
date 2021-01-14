@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Sockets;
+
 namespace SoccarServer
 {
     public class ClientReceiver : Nextwin.Server.IReceiver
@@ -7,12 +9,12 @@ namespace SoccarServer
         {
         }
 
-        public void OnReceivedData(int msgType, byte[] receivedData)
+        public void OnReceivedData(int msgType, byte[] receivedData, int clientIndex)
         {
             
         }
 
-        public void OnClientDisconnect()
+        public void OnClientDisconnect(Socket socket)
         {
             throw new NotImplementedException();
         }
