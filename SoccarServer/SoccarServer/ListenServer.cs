@@ -13,7 +13,7 @@ namespace SoccarServer
 
         protected override IReceiver CreateReceiver()
         {
-            ClientReceiver receiver = new ClientReceiver();
+            LobbyClientReceiver receiver = new LobbyClientReceiver();
             return receiver;
         }
 
